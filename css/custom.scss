@@ -1,0 +1,199 @@
+/*bootstrap - responsive font size*/
+@import "../assets/scss/bootstrap/scss/vendor/rfs";
+
+/*bootstrap - breakpoints*/
+@import "../assets/scss/bootstrap/scss/functions";
+@import "../assets/scss/bootstrap/scss/variables";
+@import "../assets/scss/bootstrap/scss/mixins/breakpoints"; 
+
+$theme-color-1:  #e46600;
+$color-pink:  #ff009d;
+$color-yellow:  #fbff00;
+$color-purple:  #bf00ff;
+$color-green:  #00ff00;
+$color-grey-1:#888888;
+$color-grey-2:#555555;
+$color-grey-3:#202020;
+
+html {
+    padding: 0px; 
+    margin: 0px;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Roboto';
+    -webkit-overflow-scrolling: touch;
+    word-break: break-word;
+}
+
+.font-40{
+    @include font-size(4rem);
+}
+.font-35{
+    @include font-size(3.5rem);
+}
+.font-30{
+    @include font-size(3rem);
+}
+.font-20{
+    @include font-size(2.0rem);
+}
+.font-18{
+    @include font-size(1.8rem);
+}
+.font-16{
+    @include font-size(1.6rem);
+}
+.font-14{
+    @include font-size(1.4rem);
+}
+
+
+/*theme color style*/
+.bg-theme-1{
+    background: $theme-color-1;
+}
+.text-theme-1{
+    color: $theme-color-1;
+    a{
+        color: $theme-color-1;
+    }
+}
+
+.bg-pink{
+    background: $color-pink;
+}
+.text-pink{
+    color: $color-pink;
+    a{
+        color: $color-pink;
+    }
+}
+
+.bg-yellow{
+    background: $color-yellow;
+}
+.text-yellow{
+    color: $color-yellow;
+    a{
+        color: $color-yellow;
+    }
+}
+
+.bg-purple{
+    background: $color-purple;
+}
+.text-purple{
+    color: $color-purple;
+    a{
+        color: $color-purple;
+    }
+}
+
+.bg-green{
+    background: $color-green;
+}
+.text-green{
+    color: $color-green;
+    a{
+        color: $color-green;
+    }
+}
+
+.bg-theme-grey-1{
+    background: $color-grey-1;
+}
+.text-theme-grey-1{
+    color: $color-grey-1;
+    a{
+        color: $color-grey-1;
+    }
+}
+.bg-theme-grey-2{
+    background: $color-grey-2;
+}
+.text-theme-grey-2{
+    color: $color-grey-2;
+    a{
+        color: $color-grey-2;
+    }
+}
+.bg-theme-grey-3{
+    background: $color-grey-3;
+}
+.text-theme-grey-3{
+    color: $color-grey-3;
+    a{
+        color: $color-grey-3;
+    }
+}
+
+.bg-theme-black{
+    background: $color-black;
+}
+.text-theme-black{
+    color: $color-black;
+    a{
+        color: $color-black;
+    }
+}
+
+.bg-white{
+    background: #ffffff;
+}
+.bg-black{
+    background: #000000;
+}
+  
+@mixin flexible() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tv-frame{
+    min-width: 600px;
+    .score-container{
+        height: 50px;
+        .box-sm{
+            width: 30px;
+        }
+        .box-lg{
+            width: calc(50% - 75px);
+        }
+    }
+    .grid-board-container{
+        display: grid;
+        grid-template-columns: 5% 11% 15% 2% 34% 5% 11% 15% 2%;
+        grid-template-rows: repeat(12, 30px [col-start]);
+        .circle{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .center{
+            display: grid;
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start: 1;
+            grid-row-end: 13;
+        }
+        .indicator-1{
+            width: 15px;
+            height: 12px;
+        }
+        .indicator-2{
+            border: 5px solid $color-pink;
+            border-radius: 20px;
+            height:20px;
+            width:20px;
+        }
+    }
+}
